@@ -27,6 +27,7 @@ urlpatterns = [
     path('cartApi/<int:id>', CartApi.as_view(),name='cartApi'),
     path('blogApi/<int:id>' , BlogApi.as_view(),name='blogApi'),
     path('contactApi/' , ContactApi.as_view(),name='contactApi'),
+    path('wishlistApi/' , WishlistApi.as_view(),name='wishlistApi'),
     
     
     
