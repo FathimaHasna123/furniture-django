@@ -9,9 +9,10 @@ from rest_framework.permissions import AllowAny
 
 
 
-class ProductApi(APIView):
+class  ProductApi(APIView):
     permission_classes=[AllowAny]
     def get(self,request):
+        print("get method called")
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
