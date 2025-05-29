@@ -74,7 +74,7 @@ class CartApi(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     def post(self, request):
-        serializer = CartSerializer(data=request.data)
+        serializer = CartPostSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
@@ -83,7 +83,7 @@ class CartApi(APIView):
     
     def put(self,request,id=None):
         cart = Cart.objects.get(id=id)
-        serializer = CartSerializer(cart,data=request.data)
+        serializer = CartPostSerializer(cart,data=request.data)
         if serializer.is_vaild():
             serializer.save()
             return Response(serializer.data,status=status.HTTP_200_OK)

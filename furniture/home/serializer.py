@@ -19,12 +19,18 @@ class UserSerializer(serializers.ModelSerializer):
                 
         
 class CartSerializer(serializers.ModelSerializer):
-    
+    productName = ProductSerializer()
+    userId = UserSerializer()
     class Meta:
         model=Cart
         fields = '__all__'
         
-
+class CartPostSerializer(serializers.ModelSerializer):
+   
+    class Meta:
+        model=Cart
+        fields = '__all__'
+        
 
 class BlogSerializer(serializers.ModelSerializer):
     
