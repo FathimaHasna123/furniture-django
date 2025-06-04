@@ -32,6 +32,19 @@ class CartPostSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 
+class QuantitySerializer(serializers.ModelSerializer):
+   
+    class Meta:
+        model=Cart
+        fields = ['quantity']      
+        
+class QuantityPostSerializer(serializers.ModelSerializer):
+   
+    class Meta:
+        model=Cart
+        fields = ['quantity']      
+        
+
 class BlogSerializer(serializers.ModelSerializer):
     
     
