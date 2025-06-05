@@ -23,13 +23,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('productApi/', ProductApi.as_view(),name='productApi'),
-    path('productApi/<int:id>', ProductApi.as_view(),name='productApi'),
+    path('productApi/<int:id>', ProductApi.as_view(),name='productUpdateApi'),
     path('userApi/', UserApi.as_view(),name='userApi'),
-    path('userApi/<int:id>', UserApi.as_view(),name='userApi'),
+    path('userApi/<int:id>', UserApi.as_view(),name='userUpdateApi'),
     path('cartApi/', CartApi.as_view(),name='cartApi'),
-    path('cartApi/<int:id>', CartApi.as_view(),name='cartApi'),
+    path('cartApi/<int:id>', CartApi.as_view(),name='cartUpdateApi'),
     path('blogApi/' , BlogApi.as_view(),name='blogApi'),
-    path('blogApi/<int:id>' , BlogApi.as_view(),name='blogApi'),
+    path('blogApi/<int:id>' , BlogApi.as_view(),name='blogUpdateApi'),
     path('contactApi/' , ContactApi.as_view(),name='contactApi'),
     path('wishlistApi/' , WishlistApi.as_view(),name='wishlistApi'),
     

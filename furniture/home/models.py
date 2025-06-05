@@ -7,6 +7,7 @@ class Product(models.Model):
    productName = models.CharField(max_length=255,null=True,blank=True)
    price = models.CharField(max_length=255,null=True,blank=True)
    rates = models.CharField(max_length=255,null=True,blank=True)
+   image =  models.ImageField(upload_to='product/',null=True,blank=True)
 
 
    def __str__(self):
@@ -30,7 +31,7 @@ class Cart(models.Model):
     
     
 class Blog(models.Model):
-    image = models.CharField(max_length=255,null=True,blank=True)
+    image =  models.ImageField(upload_to='blog/',null=True,blank=True)
     header = models.CharField(max_length=255,null=True,blank=True)
     description = models.CharField(max_length=255,null=True,blank=True)
     Paragraphs = models.CharField(max_length=255,null=True,blank=True)
