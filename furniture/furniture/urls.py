@@ -27,10 +27,11 @@ urlpatterns = [
     path('userApi/', UserApi.as_view(),name='userApi'),
     path('userApi/<int:id>', UserApi.as_view(),name='userUpdateApi'),
     path('cartApi/', CartApi.as_view(),name='cartApi'),
-    path('cartApi/<int:id>', CartApi.as_view(),name='cartUpdateApi'),
+    path('cartApi/<int:id>', CartApi.as_view(),name='cartCreateApi'),
     path('blogApi/' , BlogApi.as_view(),name='blogApi'),
     path('blogApi/<int:id>' , BlogApi.as_view(),name='blogUpdateApi'),
     path('contactApi/' , ContactApi.as_view(),name='contactApi'),
+    path('contactApi/' , ContactApi.as_view(),name='contactCreateApi'),
     path('wishlistApi/' , WishlistApi.as_view(),name='wishlistApi'),
     
     
