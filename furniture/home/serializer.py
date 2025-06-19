@@ -60,6 +60,8 @@ class ContactSerializer(serializers.ModelSerializer):
                 
                 
 class WishlistSerializer(serializers.ModelSerializer):
+    productName = ProductSerializer()
+    userId = UserSerializer()
     
     
     class Meta:
@@ -67,7 +69,6 @@ class WishlistSerializer(serializers.ModelSerializer):
         fields = '__all__' 
 
 class WishlistPostSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model=Wishlist    
         fields = '__all__'                    

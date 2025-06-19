@@ -179,14 +179,6 @@ class WishlistApi(APIView):
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)  
     
-    def put(self,request,id=None):
-        wishlist = Wishlist.objects.get(id=id)
-        serializer = WishlistPostSerializer(wishlist,data=request.data)
-        if serializer.is_vaild():
-            serializer.save()
-            return Response(serializer.data,status=status.HTTP_200_OK)
-        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-    
     def delete(self, request, id=None):
         wishlist = Wishlist.objects.get(id=id)
         wishlist.delete()

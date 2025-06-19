@@ -55,10 +55,7 @@ class Contact(models.Model):
     
 class Wishlist(models.Model):
     productName = models.ForeignKey(Product,on_delete=models.CASCADE,null=True,blank=True) 
-    unitPrice = models.CharField(max_length=255,null=True,blank=True)
-    dateAdded = models.CharField(max_length=255,null=True,blank=True)
-    stockStatus = models.CharField(max_length=255,null=True,blank=True)
-    image = models.ImageField(upload_to='wishlist/',null=True,blank=True)     
+    userId = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     
     
     def __str__(self):

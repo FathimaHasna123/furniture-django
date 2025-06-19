@@ -33,6 +33,7 @@ urlpatterns = [
     path('contactApi/' , ContactApi.as_view(),name='contactApi'),
     path('contactApi/' , ContactApi.as_view(),name='contactCreateApi'),
     path('wishlistApi/' , WishlistApi.as_view(),name='wishlistApi'),
+    path('wishlistApi/<int:id>' , WishlistApi.as_view(),name='wishlistCreateApi'),
     
     
     
